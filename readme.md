@@ -2,19 +2,19 @@ This repository leverages the pre-trained `vgg16_bn` model and the costumes coll
 
 A batch of data:
 
-![data_sample](C:\Users\guanwei\Desktop\costumes_classification\data_sample.png)
+![data_sample](data_sample.png)
 
 model prediction:
 
-![predict_1](C:\Users\guanwei\Desktop\costumes_classification\predict_1.png)
+![predict_1](predict_1.png)
 
 
 
-![predict_2](C:\Users\guanwei\Desktop\costumes_classification\predict_2.png)
+![predict_2](predict_2.png)
 
 model performance:
 
-![confusion](C:\Users\guanwei\Desktop\costumes_classification\confusion.png)
+![confusion](confusion.png)
 
 
 
