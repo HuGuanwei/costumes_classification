@@ -10,27 +10,27 @@ This repository leverages the pre-trained `vgg16_bn` model and the costumes coll
 
 **sample data**:
 
-![data_sample](data_sample.png)
+![data_sample](png/data_sample.png)
 
 
 
 ### Architecture
 
-![vgg16](vgg16.png)
+![vgg16](png/vgg16.png)
 
 ### Prediction
 
 **model prediction**:
 
-![predict_1](predict_1.png)
+![predict_1](png/predict_1.png)
 
 
 
-![predict_2](predict_2.png)
+![predict_2](png/predict_2.png)
 
 **model performance**:
 
-![confusion](confusion.png)
+![confusion](png/confusion.png)
 
 
 
