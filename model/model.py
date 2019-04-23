@@ -19,8 +19,7 @@ from fastai.vision import *
 from fastai.metrics import error_rate
 from google.colab import drive
 
-bs = 32
-
+bs = 32 # batch size
 
 drive.mount('/content/gdrive')
 DIR = Path('gdrive') / 'My Drive' / 'art' / 'costumes'
@@ -32,29 +31,20 @@ src = (ImageList.from_folder(DIR)
 
 db  = src.databunch(bs=16, num_workers=0).normalize(imagenet_stats)
 
-
+# stage-1
 learn = cnn_learner(db, models.vgg16_bn, metrics=error_rate)
-
 learn.lr_find()
-
 learn.recorder.plot()
-
 learn.fit_one_cycle(5, 5e-3)
 
+# stage-2
 learn.unfreeze()
-
 learn.lr_find()
-
 learn.recorder.plot()
-
 learn.fit_one_cycle(5, 7e-5)
 
+# performance
 learn.show_results()
-
 interp = ClassificationInterpretation.from_learner(learn)
-
 interp.plot_top_losses(9, figsize=(15,11))
-
 interp.plot_confusion_matrix(figsize=(8, 8), dpi=100)
-
-
